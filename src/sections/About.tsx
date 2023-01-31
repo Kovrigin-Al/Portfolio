@@ -62,7 +62,9 @@ const About: FC = () => {
           </div>
           <div className="p-2 ">
             <a
-              href="#"
+              href="https://drive.google.com/uc?export=download&id=1c_zCwR1GyWx8QLQUrK_vZhb7TBZj5CbQ"
+              target="_blank"
+              rel="noreferrer"
               className="mt-10 mx-12 text-white font-semibold h-12 px-6 rounded-full flex items-center justify-center bg-pink-500 highlight-white/20 hover:bg-pink-400"
             >
               Download CV
