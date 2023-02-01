@@ -20,7 +20,7 @@ const Intro: FC<Props> = ({ id, reference }) => {
       className="bg-[url('../assets/img/photo.jpeg')] flex-1 h-screen w-full bg-cover bg-top lg:bg-bottom bg-no-repeat"
     >
       <div className=" h-full w-full bg-black bg-opacity-30 z-10">
-        <header className="prose h-full w-full p-9 ">
+        <header className="prose h-full w-full p-9 pr-0">
           <h1 className="text-3xl sm:text-5xl text-white ">Hello!</h1>
           <h1 className="text-3xl sm:text-5xl text-white">
             I'm
