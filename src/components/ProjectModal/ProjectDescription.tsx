@@ -1,5 +1,5 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import React, { FC } from "react";
+import { FC, useId } from "react";
 import GithubIcon from "../../assets/icons/GithubIcon";
 import { IProject } from "../../sections/Projects";
 
@@ -8,6 +8,7 @@ type Props = {
 };
 
 const ProjectDescription: FC<Props> = ({project}) => {
+  const id = useId()
   return (
     <>
       {" "}
@@ -27,21 +28,28 @@ const ProjectDescription: FC<Props> = ({project}) => {
           </a>
         )}
       </div>
-      <div className="pl-5 sm:-mt-5 prose prose-invert prose-sm sm:prose-base prose-headings:mt-1 w-full flex flex-wrap justify-start items-start ">
+      <div className="pl-5 sm:-mt-5 prose prose-invert prose-sm max-w-none sm:prose-base prose-headings:mt-1 w-full flex flex-wrap justify-start items-start ">
+      { project.about && <div className="w-full px-2 pt-12 ">
+          <>
+            {project.about.map((i, index) => (
+              <p key={index + "f" +id}>{i.map((i, index)=><span key={index + "sub" + id}>{i}</span>)}</p>
+            ))}
+          </>
+        </div>}
         <div className="sm:w-1/2 w-full text-2xl px-2">
-          <h4>Frontend</h4>
+          <h4>Frontend techologies</h4>
           <ul className="text-base">
             {project.frontend.map((i, index) => (
-              <li key={index + "front"}>{i}</li>
+              <li key={index + "front"+id}>{i}</li>
             ))}
           </ul>
         </div>
         {project.backend && (
           <div className="sm:w-1/2 w-full text-2xl px-2 ">
-            <h4>Backend</h4>
+            <h4>Backend techologies</h4>
             <ul className="text-base">
               {project.backend.map((i, index) => (
-                <li key={index + "back"}>{i}</li>
+                <li key={index + "back" + id}>{i}</li>
               ))}
             </ul>
           </div>
@@ -50,10 +58,18 @@ const ProjectDescription: FC<Props> = ({project}) => {
           <h2>Features</h2>
           <ul>
             {project.features.map((i, index) => (
-              <li key={index + "f"}>{i}</li>
+              <li key={index + "f" +id}>{i.map((i, index)=><span key={index + "sub" + id}>{i}</span>)}</li>
             ))}
           </ul>
         </div>
+     { project.conclusion && <div className="w-full px-2 ">
+          <h2>Conclusion</h2>
+          <>
+            {project.conclusion.map((i, index) => (
+              <p key={index + "f" +id}>{i.map((i, index)=><span key={index + "sub" + id}>{i}</span>)}</p>
+            ))}
+          </>
+        </div>}
       </div>
       <div className="bg-sky-700 py-[2px] mx-5 "></div>
     </>

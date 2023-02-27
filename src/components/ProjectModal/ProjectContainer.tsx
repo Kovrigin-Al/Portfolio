@@ -20,15 +20,18 @@ const ProjectContainer: FC<Props> = ({ project }) => {
     <div className="py-4">
       <div className="max-w-md mx-auto bg-slate-800 sm:rounded-xl border-y-2 sm:border border-slate-500/30 overflow-hidden md:max-w-2xl">
         <div className="md:flex">
-          <div className="md:shrink-0">
+          <div className="md:shrink-0 relative">
+            <div className="md:absolute h-full md:w-40 left-0">
+
             <img
               onClick={openModal}
-              className="h-48 w-full hover:cursor-pointer object-cover md:h-full md:w-48"
+              className="h-48 w-full hover:cursor-pointer object-cover object-left-top md:h-full md:w-48"
               src={require(`../../assets/img/${project.previews[0]}`)}
               alt="Modern building architecture"
-            />
+              />
+              </div>
           </div>
-          <div className="p-8">
+          <div className="p-8 md:ml-40">
             <div
               onClick={openModal}
               className="uppercase tracking-wide sm:text-2xl text-xl text-pink-500 hover:underline underline-offset-4 hover:cursor-pointer font-semibold"
