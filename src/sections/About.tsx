@@ -17,10 +17,10 @@ const About: FC = () => {
           </h3>
           <p className="sm:text-lg text-md mb-4">
             My career path in web development area has been started in August
-            2021. I believe that my engineering background has helped me gain
+            2022. I believe that my engineering background has helped me gain
             solid knowledge in basic programming in a short time. However, I've
-            already spent 600+ hour learning new things and completed more than
-            80 practice tasks and educational projects.
+            already spent 700+ hour learning new things and completed more than
+            60 practice tasks and educational projects.
           </p>
           <p className="sm:text-lg text-md mb-4">
             I'm keen on challenging tasks, looking for continues improvement and

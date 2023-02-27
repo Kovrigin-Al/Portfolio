@@ -9,7 +9,7 @@ type Props = {
 
 const Intro: FC<Props> = ({ id, reference }) => {
   const [text, helper] = useTypewriter({
-    words: [" Engineer", " Frontend Developer"],
+    words: [" an Engineer", " a Frontend Developer"],
   });
   const { isDone } = helper;
 
@@ -23,7 +23,7 @@ const Intro: FC<Props> = ({ id, reference }) => {
         <header className="prose h-full w-full p-9 pr-0">
           <h1 className="text-3xl sm:text-5xl text-white ">Hello!</h1>
           <h1 className="text-3xl sm:text-5xl text-white">
-            I'm
+            I'm 
             {text}
             {!isDone && <Cursor />}
           </h1>
