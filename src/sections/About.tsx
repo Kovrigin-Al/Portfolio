@@ -12,8 +12,7 @@ const About: FC = () => {
         {/* about */}
         <div className="col-start-2 col-end-12 lg:col-start-1 lg:col-end-8  justify-items-center lg:pr-8">
           <h3 className="text-justify  font-sans sm:text-2xl text-xl leading-7 font-bold mb-4">
-            I'm <span className="text-sky-500 ">Aleksei Kovrigin,</span> a
-            Junior Web Developer
+            I'm <span className="text-sky-500 ">Aleksei Kovrigin,</span> a Web Developer
           </h3>
           <p className="sm:text-lg text-md mb-4">
             My career path in web development area has been started in August
